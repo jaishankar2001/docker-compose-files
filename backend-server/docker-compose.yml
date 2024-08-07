@@ -1,7 +1,5 @@
-version: "3.8"
-
 services:
   app:
-    image: disconnector12/race-stream-backend-sever
+    image: disconnector12/race-stream-backend-server
     ports:
       - "8383:8383"
