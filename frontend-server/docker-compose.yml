@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    image: disconnector12/race-stream-frontend
+    build:
+      context: .
+    volumes:
+      - ./:/app # Mount the current directory into the /app directory in the container
+      - .env:/app/.env # Mount the .env file into the container
+    environment:
+      - ENV_FILE=/app/.env # Optionally specify the path to the .env file if needed by your application
+    ports:
+      - "3000:3000" # Expose the necessary ports
